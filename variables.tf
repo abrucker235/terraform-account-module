@@ -19,6 +19,17 @@ variable "parent_id" {
   description = "Organization/Unit parent identifier"
 }
 
+variable "enable_account_scp" {
+  type        = bool
+  default     = true
+  description = "Account Specific Service Control Policy Enablement"
+}
+
+variable "network_admins" {
+  type        = list(string)
+  description = "List of roles that have network admin access"
+}
+
 variable "flow_log_retention" {
   type        = number
   default     = 90
